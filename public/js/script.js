@@ -63,7 +63,7 @@
             const response = await searchYoutube(query=value);
             const href = response['href'];
             let src = null;
-            href ? spanResult.textContent = `href: ${href}` : spanResult.textContent = `"href": ${href}`;
+            spanResult.textContent = `href: ${href}`;
             href ? src = createEmbeddedYoutubeSrc(href) : src = '';
             youtubeVideo.setAttribute('src', src)
         } catch (e) {
